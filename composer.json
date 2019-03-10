@@ -1,0 +1,31 @@
+{
+    "name": "dealnews/typed-objects",
+    "type": "library",
+    "description": "Base classes for creating objects with typed/constrained properties",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Brian Moon",
+            "email": "brianm@dealnews.com",
+            "homepage": "https://www.dealnews.com/",
+            "role": "Developer"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "dealnews/constraints": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DealNews\\TypedObjects\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DealNews\\TypedObjects\\Tests\\": "tests/"
+        }
+    }
+}
