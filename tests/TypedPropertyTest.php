@@ -97,6 +97,8 @@ class TypedPropertyTest extends \PHPUnit\Framework\TestCase {
         $hire_date->date   = '1997-01-01';
         $object->hire_date = $hire_date;
 
+        $object->array_a   = [$hire_date];
+
         $expected = [
             'name'      => 'test',
             'hire_date' =>
@@ -106,7 +108,13 @@ class TypedPropertyTest extends \PHPUnit\Framework\TestCase {
                     'daylight_savings_time' => null,
                 ],
             'position'  => null,
-            'array_a'   => null,
+            'array_a'   => [
+                [
+                    'time'                  => null,
+                    'date'                  => '1997-01-01',
+                    'daylight_savings_time' => null,
+                ],
+            ],
             'boolean_a' => null,
             'float_a'   => null,
             'int_a'     => null,

@@ -155,6 +155,19 @@ abstract class TypedProperty {
             ) {
                 $output[$key] = $value->to_array();
             } else {
+                if (is_array($value)) {
+                    foreach ($value as $k => $v) {
+                        if (
+                            is_object($v) &&
+                            (
+                                $v instanceof TypedProperty ||
+                                $v instanceof TypedArray
+                            )
+                        ) {
+                            $value[$k] = $v->to_array();
+                        }
+                    }
+                }
                 $output[$key] = $value;
             }
         }

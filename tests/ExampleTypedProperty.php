@@ -34,13 +34,32 @@ class ExampleTypedProperty extends TypedProperty {
     protected $parent;
 
     protected const CONSTRAINTS = [
-        'name'      => ['type' => 'string'],
-        'hire_date' => ['type' => '\DealNews\TypedObjects\Tests\ExampleTypedSubProperty'],
-        'parent'    => ['type' => '\DealNews\TypedObjects\Tests\ExampleTypedProperty'],
-        'position'  => ['type' => 'string'],
-        'array_a'   => ['type' => 'array'],
-        'boolean_a' => ['type' => 'boolean'],
-        'float_a'   => ['type' => 'double'],
-        'int_a'     => ['type' => 'integer'],
+        'name'      => [
+            'type' => 'string'
+        ],
+        'hire_date' => [
+            'type' => '\DealNews\TypedObjects\Tests\ExampleTypedSubProperty'
+        ],
+        'parent'    => [
+            'type' => '\DealNews\TypedObjects\Tests\ExampleTypedProperty'
+        ],
+        'position'  => [
+            'type' => 'string'
+        ],
+        'array_a'   => [
+            'type' => 'array',
+            'constraint' => [
+                'type' => '\DealNews\TypedObjects\Tests\ExampleTypedSubProperty'
+            ]
+        ],
+        'boolean_a' => [
+            'type' => 'boolean'
+        ],
+        'float_a'   => [
+            'type' => 'double'
+        ],
+        'int_a'     => [
+            'type' => 'integer'
+        ],
     ];
 }
