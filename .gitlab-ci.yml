@@ -1,0 +1,3 @@
+include:
+  - project: 'cicd/scripts'
+    file: '/php-library.yaml'
